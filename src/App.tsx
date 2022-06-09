@@ -11,8 +11,8 @@ function App() {
       <div className="App">
         <Header />
         <Routes>
-          <Route path='/favourite' element={<FavouritesPage />} />
-          <Route path='/' element={<MainPage />}/>
+          <Route path='/frontend-challenge/favourite' element={<FavouritesPage />} />
+          <Route path='/frontend-challenge/' element={<MainPage />}/>
         </Routes>
       </div>
     </BrowserRouter>

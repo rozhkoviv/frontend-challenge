@@ -52,14 +52,14 @@
   height: 36.7px;
   margin-right: 4px;
   margin-bottom: 4px;
-  background-image: url("./../assets/heart.svg");
+  background-image: url("../assets/heart.svg");
 }
 .img-card-heart:hover {
   cursor: pointer;
-  background-image: url("./../assets/heart_fill.svg");
+  background-image: url("../assets/heart_fill.svg");
 }
 .img-card-heart-loved {
-  background-image: url("./../assets/heart_fill.svg");
+  background-image: url("../assets/heart_fill.svg");
 }
 
 .header {
