@@ -1,0 +1,111 @@
+$heart-img: url('./../assets/heart.svg');
+$heart-fill-img: url('./../assets/heart_fill.svg');
+
+$color-primary: #2196F3;
+$color-secondary: #1E88E5;
+
+@font-face {
+  font-family: Roboto Regular;
+  src: url('../assets/fonts/Roboto-Regular.ttf');
+}
+
+.App {
+  text-align: center;
+  height: 100vh;
+}
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 38px;
+  max-height: calc(100vh - 112px);
+  overflow-y: scroll;
+}
+
+.cats-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.loader {
+  margin-bottom: 10px;
+}
+
+.img-card {
+  margin: 24px;
+
+  &-cat {
+    width: 225px;
+    height: 225px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  &:hover {
+    padding: 15px;
+    margin: 9px;
+    box-shadow: 0px 6px 5px rgba(0, 0, 0, 0.24), 0px 9px 18px rgba(0, 0, 0, 0.18);
+  }
+
+  &:hover &-heart {
+    display: block;
+  }
+
+  &-heart {
+    display: none;
+    width: 40px;
+    height: 36.7px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    background-image: $heart-img;
+    
+    &:hover {
+      cursor: pointer;
+      background-image: $heart-fill-img;
+    }
+
+    &-loved {
+      background-image: $heart-fill-img;
+    }
+  }
+}
+
+.header {
+  background-color: $color-primary;
+  height: 64px;
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  margin-left: 62px;
+
+  &-item {
+    color: white;
+    height: 100%;
+    text-align: center;
+    padding: 0 15px;
+    line-height: 64px;
+    font-family: 'Roboto Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $color-secondary;
+      cursor: pointer;
+    }
+  }
+}
+
+.selected {
+  background-color: $color-secondary;
+}
